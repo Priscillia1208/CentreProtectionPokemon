@@ -1,0 +1,11 @@
+header {
+    background: linear-gradient(red, whitesmoke);
+}
+
+
+
+.logo {
+    height: 50px;
+    width: 50px;
+    margin-left: 50px;
+}
