@@ -1,11 +1,31 @@
+body {
+    margin: 20px;
+}
+
+.container {
+    width: 900px;
+}
+
 header {
     background: linear-gradient(red, whitesmoke);
 }
-
-
 
 .logo {
     height: 50px;
     width: 50px;
     margin-left: 50px;
 }
+
+.photo {
+    height: 250px;
+    width: 200px;
+}
+
+ul {
+    list-style-type: disc
+}
+
+.detailTitre {
+    text-align: center;
+}
+

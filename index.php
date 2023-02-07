@@ -12,7 +12,7 @@ $racesPok = $stm2->fetchAll();
 //print_r($pokemons);
 //print_r($racesPok);
 
-$photo = ['bulbi.png', 'cara.png', 'doudou.jpg', 'meche.png', 'pika.jpg', 'sala.jpg']
+$photos = ['Bulbi.png', 'Cara.png', 'Doudou.jpg', 'Mèche.png', 'Pika.jpg', 'Sala.jpg']
 ?>
 
 <!doctype html>
@@ -62,7 +62,16 @@ $photo = ['bulbi.png', 'cara.png', 'doudou.jpg', 'meche.png', 'pika.jpg', 'sala.
     foreach ($pokemons as $pokemon){
     ?>
 
-    <div class="card" style="width: 18rem;">
+    <div class="card d-inline-flex mt-5 me-3" style="width: 18rem;" >
+        <img class="card-img-top mx-auto photo" src="<?php
+        foreach ($photos as $photo){
+            $nomPhoto = strstr($photo, '.', true );
+            $typePhoto = strstr($photo, '.', false );
+            if ($nomPhoto == $pokemon['nom']){
+                echo 'img/photos/'. $nomPhoto. $typePhoto;
+            }
+        }
+        ?>" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title"><?php echo $pokemon['nom']?></h5>
             <h6 class="card-subtitle mb-2 text-muted">Race:
@@ -77,7 +86,7 @@ $photo = ['bulbi.png', 'cara.png', 'doudou.jpg', 'meche.png', 'pika.jpg', 'sala.
                 ?>
             </h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Détail</a>
+            <a href="<?php echo 'detail.php'.'?identifiant='.$pokemon['id']?>" class="card-link">Détail</a>
         </div>
     </div>
 
