@@ -40,8 +40,8 @@ $photos = ['Bulbi.png', 'Cara.png', 'Doudou.jpg', 'Mèche.png', 'Pika.jpg', 'Sal
         </ul>
 
         <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-dark me-2">Login</button>
-            <button type="button" class="btn btn-dark">Sign-up</button>
+            <button type="button" class="btn btn-outline-dark me-2"><a href="formulaireConnexion.php">Connexion</a></button>
+            <button type="button" class="btn btn-dark"><a href="formulaireCreationCompte.php">Création compte</a></button>
         </div>
     </header>
 
